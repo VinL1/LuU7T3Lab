@@ -1,34 +1,16 @@
 import java.util.ArrayList;
+import java.util.Arrays; // you need this to use Arrays.asList()
 
 public class Main
 {
     public static void main(String[] args)
     {
-        ArrayList<Cat> catList = new ArrayList<Cat>();
-        catList.add(new Cat("Patty"));
-        catList.add(new Cat("Keith"));
-        catList.add(new Cat("Jerry"));
-        catList.add(new Cat("Mary"));
+        ArrayList<Integer> nums = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
 
-        // COMPLETE ME: print each Cat’s name using a
-        // standard for loop
-        for (int i = 0; i < catList.size(); i ++)
-        {
-            System.out.println(catList.get(i).getName());
+        for (int i = 1; i < nums.size() - 1; i ++){
+            nums.set(i - 1, nums.get(i) + nums.get(i + 1));
         }
-        // COMPLETE ME: print each Cat’s name using an
-        // enhanced for loop
-        for (Cat dog : catList)
-        {
-            System.out.println(dog.getName());
-        }
-        // COMPLETE ME: print each Cat’s name (a third
-        // time!) using a while loop
-        int i = 0;
-        while (i < catList.size())
-                {
-                    System.out.println(catList.get(i).getName());
-                    i++;
-                }
+
+        System.out.println(nums);
     }
 }
