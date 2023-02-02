@@ -4,27 +4,30 @@ public class Main
 {
     public static void main(String[] args)
     {
-        ArrayList<String> names = new ArrayList<String>();
-        names.add("Jamal");
-        names.add("Emily");
-        names.add("Destiny");
-        names.add("Mateo");
+        ArrayList<Cat> catList = new ArrayList<Cat>();
+        catList.add(new Cat("Patty"));
+        catList.add(new Cat("Keith"));
+        catList.add(new Cat("Jerry"));
+        catList.add(new Cat("Mary"));
 
-        //COMPLETE ME: print each name using standard for loop
-        for (int i = 0; i < names.size(); i ++)
+        // COMPLETE ME: print each Cat’s name using a
+        // standard for loop
+        for (int i = 0; i < catList.size(); i ++)
         {
-            System.out.println(names.get(i));
+            System.out.println(catList.get(i).getName());
         }
-        //COMPLETE ME: print each name (again!) using enhanced for loop
-        for (String name : names)
+        // COMPLETE ME: print each Cat’s name using an
+        // enhanced for loop
+        for (Cat dog : catList)
         {
-            System.out.println(name);
+            System.out.println(dog.getName());
         }
-        //COMPLETE ME: print each name (a third time!) using a while loop
+        // COMPLETE ME: print each Cat’s name (a third
+        // time!) using a while loop
         int i = 0;
-        while (i < names.size())
+        while (i < catList.size())
                 {
-                    System.out.println(names.get(i));
+                    System.out.println(catList.get(i).getName());
                     i++;
                 }
     }
